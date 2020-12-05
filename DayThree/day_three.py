@@ -13,8 +13,8 @@ for row in row_list:
 
 print("Part one:", tree_count)
 
-# Part Two
 
+# Part Two
 
 def findTreeBySlope(right, rows):
     index = 0
