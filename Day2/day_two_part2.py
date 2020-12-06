@@ -1,4 +1,5 @@
 # How many passwords are valid according to their policies?
+# (Part Two).
 
 import re
 
@@ -12,6 +13,7 @@ def checkIfValid(password_line):
     high_range = int(range_requirement[1])
     letter_requirement = " ".join(re.findall(".(?=:)", password_line))
     password = " ".join(re.findall(": (.*)", password_line))
+
     # Check if the letter requirement is found in the password.
     if letter_requirement in password:
         if password[low_range - 1] == letter_requirement and not password[high_range - 1] == letter_requirement:
